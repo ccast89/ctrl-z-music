@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+@theme {
+  /* COLORES CTRL-Z MUSIC */
+
+  --color-bg-main: #0D0F0E;
+  --color-bg-secondary: #151917;
+
+  --color-card: #1D221F;
+  --color-border: #303733;
+
+  --color-brand: #20C968;
+  --color-brand-hover: #35E27D;
+
+  --color-text-primary: #F5F7F6;
+  --color-text-secondary: #A7B0AA;
+}

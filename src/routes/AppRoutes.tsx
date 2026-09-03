@@ -5,6 +5,8 @@ import Nosotros from "../pages/Nosotros";
 import Login from "../pages/Login";
 import Admin from "../pages/Admin";
 import DetalleCancion from "../pages/DetalleCancion";
+import Registro from "../pages/Registro";
+import Playlists from "../pages/Playlists";
 import NotFound from "../pages/NotFound";
 
 function AppRoutes() {
@@ -16,6 +18,8 @@ function AppRoutes() {
         <Route path="/cancion/:id" element={<DetalleCancion />} />
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Admin />} />
+        <Route path="/registro" element={<Registro />} />
+        <Route path="/playlists" element={<Playlists />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

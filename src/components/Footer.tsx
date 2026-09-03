@@ -77,7 +77,7 @@ function Footer() {
 
               <li>
                 <Link
-                  to="/biblioteca"
+                  to="/playlists"
                   className="text-[#B3B3B3] hover:text-[#1DB954] transition"
                 >
                   Biblioteca

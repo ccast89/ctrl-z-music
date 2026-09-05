@@ -17,4 +17,5 @@ export type User = {
 export interface AuthContextType {
   user: User | null;
   login: (correo: string, password: string) => boolean;
+  logout: () => void;
 }

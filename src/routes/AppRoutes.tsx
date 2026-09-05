@@ -6,6 +6,7 @@ import Login from "../pages/Login";
 import Admin from "../pages/Admin";
 import DetalleCancion from "../pages/DetalleCancion";
 import Registro from "../pages/Registro";
+import ProtectedRoutes from "./ProtectedRoutes";
 import Playlists from "../pages/Playlists";
 import NotFound from "../pages/NotFound";
 
@@ -17,7 +18,14 @@ function AppRoutes() {
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="cancion/:id" element={<DetalleCancion />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/admin" element={<Admin />} />
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoutes>
+              <Admin />
+            </ProtectedRoutes>
+          }
+        />
         <Route path="/registro" element={<Registro />} />
         <Route path="/playlists" element={<Playlists />} />
         <Route path="*" element={<NotFound />} />

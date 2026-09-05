@@ -1,6 +1,16 @@
+import { useContext } from "react";
 import { Link } from "react-router";
+import { AuthContext } from "../context/AuthContext";
 
 function Navbar() {
+  const auth = useContext(AuthContext); // Para q el nav sepa si ya iniciaron sesion
+
+  if (!auth) {
+    return null;
+  }
+
+  const { user, logout } = auth;
+
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[#121212]/95 backdrop-blur-md border-b border-white/5">
       <nav className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 h-20 flex items-center justify-between">
@@ -39,12 +49,21 @@ function Navbar() {
             Biblioteca
           </Link>
 
-          <Link
-            to="/login"
-            className="bg-[#1DB954] text-black font-bold px-6 py-2.5 rounded-full hover:bg-[#1ED760] transition"
-          >
-            Acceso
-          </Link>
+          {user ? (
+            <button
+              onClick={logout}
+              className="bg-[#1DB954] text-black font-bold px-6 py-2.5 rounded-full hover:bg-[#1ED760] transition"
+            >
+              Cerrar sesión
+            </button>
+          ) : (
+            <Link
+              to="/login"
+              className="bg-[#1DB954] text-black font-bold px-6 py-2.5 rounded-full hover:bg-[#1ED760] transition"
+            >
+              Acceso
+            </Link>
+          )}
         </div>
 
         {/* BOTÓN MÓVIL */}

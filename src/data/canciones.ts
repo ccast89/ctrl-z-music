@@ -1,0 +1,38 @@
+ export const canciones = [
+  {
+    id: "1",
+    titulo: "Hole my soul",
+    artista: "Aerosmith",
+    categoria: "Hard Rock",
+    imagen: "/imagenes/hole_my_soul.jpg",
+    duracion: "00:06:10",
+    audio: "/audios/aerosmith - nine lives - hole in my soul.mp3",
+  },
+  {
+    id: "2",
+    titulo: "Crazy",
+    artista: "Aerosmith",
+    categoria: "Hard Rock",
+    imagen: "/imagenes/crazyjpg.jpg",
+    duracion: "00:05:13",
+    audio: "/audios/10 - aerosmith - aerosmith - crazy.mp3",
+  },
+  {
+    id: "3",
+    titulo: "Amazing",
+    artista: "Aerosmith",
+    categoria: "Hard Rock",
+    imagen: "/imagenes/Amazing.jpg",
+    duracion: "00:05:56",
+    audio: "/audios/aerosmith - amazing(2).mp3",
+  },
+  {
+    id: "4",
+    titulo: "Armagedon",
+    artista: "Aerosmith",
+    categoria: "Hard Rock",
+    imagen: "/imagenes/Armageddon.jpg",
+    duracion: "00:04:59",
+    audio: "/audios/Aero Smith- Armagedon.mp3",
+  },
+];

@@ -14,9 +14,9 @@ function AppRoutes() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
+        <Route index element={<Home />} />
         <Route path="/nosotros" element={<Nosotros />} />
-        <Route path="/cancion/:id" element={<DetalleCancion />} />
+        <Route path="cancion/:id" element={<DetalleCancion />} />
         <Route path="/login" element={<Login />} />
         <Route
           path="/admin"

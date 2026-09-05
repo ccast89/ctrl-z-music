@@ -1,7 +1,9 @@
 //Modelo de usuario
 export interface UsuarioRegistrado {
   id: number;
+  nombreCompleto: string;
   correo: string;
+  telefono: string;
   password: string;
   rol: string;
 }

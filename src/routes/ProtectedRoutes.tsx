@@ -22,8 +22,6 @@ function ProtectedRoutes({ children }: ProtectedRoutesProps) {
   }
 
   return children;
-
-  return children;
 }
 
 export default ProtectedRoutes;

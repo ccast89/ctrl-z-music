@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
@@ -10,6 +10,8 @@ interface LoginForm {
 
 function Login() {
   const navigate = useNavigate();
+
+  const [errorLogin, setErrorLogin] = useState("");
 
   const auth = useContext(AuthContext);
 
@@ -31,7 +33,10 @@ function Login() {
     const loginCorrecto = login(correo, password);
 
     if (loginCorrecto) {
+      setErrorLogin("");
       navigate("/");
+    } else {
+      setErrorLogin("Correo o contraseña incorrectos");
     }
   };
 
@@ -83,6 +88,11 @@ function Login() {
                 },
               })}
             />
+            {errorLogin && (
+              <p className="text-red-500 text-sm text-center mb-4">
+                {errorLogin}
+              </p>
+            )}
             {errors.password && (
               <p className="text-red-500 text-sm mt-1">
                 {errors.password.message}

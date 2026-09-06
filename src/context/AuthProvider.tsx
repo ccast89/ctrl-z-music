@@ -40,21 +40,28 @@ function AuthProvider({ children }: AuthProviderProps) {
   }, [user]);
 
   const login = (correo: string, password: string) => {
-    const usuarios: UsuarioRegistrado[] = JSON.parse(
-      localStorage.getItem("users") ?? "[]",
-    );
+    try {
+      const usuarios: UsuarioRegistrado[] = JSON.parse(
+        localStorage.getItem("users") ?? "[]",
+      );
 
-    const usuarioEncontrado = usuarios.find(
-      (usuario) => usuario.correo === correo && usuario.password === password,
-    );
-    if (usuarioEncontrado) {
-      const { id, correo, rol } = usuarioEncontrado;
+      const usuarioEncontrado = usuarios.find(
+        (usuario) => usuario.correo === correo && usuario.password === password,
+      );
 
-      setUser({ id, correo, rol });
+      if (usuarioEncontrado) {
+        const { id, correo, rol } = usuarioEncontrado;
 
-      return true;
+        setUser({ id, correo, rol });
+
+        return true;
+      }
+
+      return false;
+    } catch (error) {
+      console.error("Error al leer los usuarios guardados:", error);
+      return false;
     }
-    return false;
   };
 
   const logout = () => {

@@ -4,9 +4,7 @@ import { canciones } from "../data/canciones";
 function DetalleCancion() {
   const { id } = useParams();
 
-  const cancionEncontrada = canciones.find(
-    (cancion) => cancion.id === id
-  );
+  const cancionEncontrada = canciones.find((cancion) => cancion.id === id);
 
   return (
     <main
@@ -21,9 +19,8 @@ function DetalleCancion() {
       <p>Título: {cancionEncontrada?.titulo}</p>
       <p>Artista: {cancionEncontrada?.artista}</p>
       <p>Categoria: {cancionEncontrada?.categoria}</p>
-      <img src= {cancionEncontrada?.imagen} />
+      <img src={cancionEncontrada?.imagen} />
       <audio src={cancionEncontrada?.audio} controls></audio>
-
     </main>
   );
 }

@@ -119,183 +119,197 @@ function Admin() {
   };
 
   return (
-    <main className="min-h-screen bg-black text-white px-6 py-28">
-      <h1 className="text-3xl font-bold mb-8">Administración</h1>
+    <main className="w-full min-h-screen bg-black text-white py-28">
+      <div className="w-full max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
+        <h1 className="text-3xl font-bold mb-8">Administración</h1>
 
-      <form
-        onSubmit={handleSubmit(formSubmit)}
-        className="bg-zinc-900 p-6 rounded-2xl mb-10"
-      >
-        <div className="mb-4">
-          <label htmlFor="titulo" className="block mb-2 font-medium">
-            Título
-          </label>
+        <form
+          onSubmit={handleSubmit(formSubmit)}
+          className="bg-zinc-900 p-6 rounded-2xl mb-10"
+        >
+          <div className="mb-4">
+            <label htmlFor="titulo" className="block mb-2 font-medium">
+              Título
+            </label>
+            <input
+              type="text"
+              id="titulo"
+              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 outline-none focus:border-[#1DB954]"
+              {...register("titulo", {
+                required: "El título es obligatorio",
+              })}
+            />
+            {errors.titulo && (
+              <p className="text-red-400 text-sm mt-1">
+                {errors.titulo.message}
+              </p>
+            )}
+          </div>
 
-          <input
-            type="text"
-            id="titulo"
-            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 outline-none focus:border-[#1DB954]"
-            {...register("titulo", {
-              required: "El título es obligatorio",
-            })}
-          />
+          <div className="mb-4">
+            <label htmlFor="artista" className="block mb-2 font-medium">
+              Artista
+            </label>
+            <input
+              type="text"
+              id="artista"
+              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 outline-none focus:border-[#1DB954]"
+              {...register("artista", {
+                required: "El artista es obligatorio",
+              })}
+            />
+            {errors.artista && (
+              <p className="text-red-400 text-sm mt-1">
+                {errors.artista.message}
+              </p>
+            )}
+          </div>
 
-          {errors.titulo && (
-            <p className="text-red-400 text-sm mt-1">{errors.titulo.message}</p>
-          )}
-        </div>
+          <div className="mb-4">
+            <label htmlFor="categoria" className="block mb-2 font-medium">
+              Categoría
+            </label>
+            <input
+              type="text"
+              id="categoria"
+              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 outline-none focus:border-[#1DB954]"
+              {...register("categoria", {
+                required: "La categoría es obligatoria",
+              })}
+            />
+            {errors.categoria && (
+              <p className="text-red-400 text-sm mt-1">
+                {errors.categoria.message}
+              </p>
+            )}
+          </div>
 
-        <div className="mb-4">
-          <label htmlFor="artista" className="block mb-2 font-medium">
-            Artista
-          </label>
+          <div className="mb-4">
+            <label htmlFor="imagen" className="block mb-2 font-medium">
+              Imagen
+            </label>
+            <input
+              type="text"
+              id="imagen"
+              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 outline-none focus:border-[#1DB954]"
+              {...register("imagen", {
+                required: "La imagen es obligatoria",
+              })}
+            />
+            {errors.imagen && (
+              <p className="text-red-400 text-sm mt-1">
+                {errors.imagen.message}
+              </p>
+            )}
+          </div>
 
-          <input
-            type="text"
-            id="artista"
-            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 outline-none focus:border-[#1DB954]"
-            {...register("artista", {
-              required: "El artista es obligatorio",
-            })}
-          />
+          <div className="mb-4">
+            <label htmlFor="duracion" className="block mb-2 font-medium">
+              Duración
+            </label>
+            <input
+              type="text"
+              id="duracion"
+              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 outline-none focus:border-[#1DB954]"
+              {...register("duracion", {
+                required: "La duración es obligatoria",
+              })}
+            />
+            {errors.duracion && (
+              <p className="text-red-400 text-sm mt-1">
+                {errors.duracion.message}
+              </p>
+            )}
+          </div>
 
-          {errors.artista && (
-            <p className="text-red-400 text-sm mt-1">
-              {errors.artista.message}
-            </p>
-          )}
-        </div>
+          <div className="mb-4">
+            <label htmlFor="audio" className="block mb-2 font-medium">
+              Audio
+            </label>
+            <input
+              type="text"
+              id="audio"
+              className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 outline-none focus:border-[#1DB954]"
+              {...register("audio", {
+                required: "El audio es obligatorio",
+              })}
+            />
+            {errors.audio && (
+              <p className="text-red-400 text-sm mt-1">
+                {errors.audio.message}
+              </p>
+            )}
+          </div>
 
-        <div className="mb-4">
-          <label htmlFor="categoria" className="block mb-2 font-medium">
-            Categoría
-          </label>
+          <div className="flex gap-3">
+            <button
+              type="submit"
+              className="bg-[#1DB954] text-black font-bold px-6 py-2.5 rounded-full hover:bg-[#1ED760] transition"
+            >
+              {idEdicion ? "Guardar cambios" : "Agregar canción"}
+            </button>
+            <button
+              type="button"
+              onClick={cancelar}
+              className="bg-zinc-700 text-white font-bold px-6 py-2.5 rounded-full hover:bg-zinc-600 transition"
+            >
+              Cancelar
+            </button>
+          </div>
+        </form>
 
-          <input
-            type="text"
-            id="categoria"
-            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 outline-none focus:border-[#1DB954]"
-            {...register("categoria", {
-              required: "La categoría es obligatoria",
-            })}
-          />
-
-          {errors.categoria && (
-            <p className="text-red-400 text-sm mt-1">
-              {errors.categoria.message}
-            </p>
-          )}
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="imagen" className="block mb-2 font-medium">
-            Imagen
-          </label>
-
-          <input
-            type="text"
-            id="imagen"
-            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 outline-none focus:border-[#1DB954]"
-            {...register("imagen", {
-              required: "La imagen es obligatoria",
-            })}
-          />
-
-          {errors.imagen && (
-            <p className="text-red-400 text-sm mt-1">{errors.imagen.message}</p>
-          )}
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="duracion" className="block mb-2 font-medium">
-            Duración
-          </label>
-
-          <input
-            type="text"
-            id="duracion"
-            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 outline-none focus:border-[#1DB954]"
-            {...register("duracion", {
-              required: "La duración es obligatoria",
-            })}
-          />
-
-          {errors.duracion && (
-            <p className="text-red-400 text-sm mt-1">
-              {errors.duracion.message}
-            </p>
-          )}
-        </div>
-
-        <div className="mb-4">
-          <label htmlFor="audio" className="block mb-2 font-medium">
-            Audio
-          </label>
-
-          <input
-            type="text"
-            id="audio"
-            className="w-full bg-zinc-800 border border-zinc-700 rounded-lg px-4 py-2 outline-none focus:border-[#1DB954]"
-            {...register("audio", {
-              required: "El audio es obligatorio",
-            })}
-          />
-
-          {errors.audio && (
-            <p className="text-red-400 text-sm mt-1">{errors.audio.message}</p>
-          )}
-        </div>
-
-        <div className="flex gap-3">
-          <button
-            type="submit"
-            className="bg-[#1DB954] text-black font-bold px-6 py-2.5 rounded-full hover:bg-[#1ED760] transition"
-          >
-            {idEdicion ? "Guardar cambios" : "Agregar canción"}
-          </button>
-
-          <button
-            type="button"
-            onClick={cancelar}
-            className="bg-zinc-700 text-white font-bold px-6 py-2.5 rounded-full hover:bg-zinc-600 transition"
-          >
-            Cancelar
-          </button>
-        </div>
-      </form>
-
-      <table className="w-full">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Título</th>
-            <th>Artista</th>
-            <th>Categoría</th>
-            <th>Duración</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          {listaCanciones.map(
-            ({ id, titulo, artista, categoria, duracion }) => (
-              <tr key={id}>
-                <td>{id}</td>
-                <td>{titulo}</td>
-                <td>{artista}</td>
-                <td>{categoria}</td>
-                <td>{duracion}</td>
-
-                <td>
-                  <button onClick={() => editarCancion(id)}>Editar</button>
-
-                  <button onClick={() => eliminarCancion(id)}>Eliminar</button>
-                </td>
+        <div className="w-full overflow-x-auto rounded-xl">
+          <table className="w-full bg-zinc-900">
+            <thead>
+              <tr className="border-b border-zinc-700 text-left">
+                <th className="hidden md:table-cell px-4 py-3">ID</th>
+                <th className="px-4 py-3">Título</th>
+                <th className="px-4 py-3">Artista</th>
+                <th className="hidden md:table-cell px-4 py-3">Categoría</th>
+                <th className="hidden md:table-cell px-4 py-3">Duración</th>
+                <th className="px-4 py-3">Acciones</th>
               </tr>
-            ),
-          )}
-        </tbody>
-      </table>
+            </thead>
+
+            <tbody>
+              {listaCanciones.map(
+                ({ id, titulo, artista, categoria, duracion }) => (
+                  <tr
+                    key={id}
+                    className="border-b border-zinc-800 hover:bg-zinc-800/50 transition"
+                  >
+                    <td className="hidden md:table-cell px-4 py-4">{id}</td>
+                    <td className="px-4 py-4">{titulo}</td>
+                    <td className="px-4 py-4">{artista}</td>
+                    <td className="hidden md:table-cell px-4 py-4">
+                      {categoria}
+                    </td>
+                    <td className="hidden md:table-cell px-4 py-4">
+                      {duracion}
+                    </td>
+                    <td className="px-4 py-4">
+                      <div className="flex gap-2">
+                        <button
+                          onClick={() => editarCancion(id)}
+                          className="bg-zinc-700 px-4 py-2 rounded-lg hover:bg-zinc-600 transition"
+                        >
+                          Editar
+                        </button>
+                        <button
+                          onClick={() => eliminarCancion(id)}
+                          className="bg-red-600 px-4 py-2 rounded-lg hover:bg-red-500 transition"
+                        >
+                          Eliminar
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                ),
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </main>
   );
 }

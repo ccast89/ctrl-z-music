@@ -49,6 +49,15 @@ function Navbar() {
             Biblioteca
           </Link>
 
+          {user?.rol === "admin" && (
+            <Link
+              to="/admin"
+              className="text-[#B3B3B3] font-medium hover:text-[#1DB954] transition"
+            >
+              Administración
+            </Link>
+          )}
+
           {user ? (
             <button
               onClick={logout}

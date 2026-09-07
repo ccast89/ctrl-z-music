@@ -21,6 +21,7 @@ function DetalleCancion() {
       <p>Título: {cancionEncontrada?.titulo}</p>
       <p>Artista: {cancionEncontrada?.artista}</p>
       <p>Categoria: {cancionEncontrada?.categoria}</p>
+      <p>Duración: {cancionEncontrada?.duracion}</p>
       <img src= {cancionEncontrada?.imagen} />
       <audio src={cancionEncontrada?.audio} controls></audio>
 

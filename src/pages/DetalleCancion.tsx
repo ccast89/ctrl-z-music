@@ -19,12 +19,8 @@ function DetalleCancion() {
       <p>Título: {cancionEncontrada?.titulo}</p>
       <p>Artista: {cancionEncontrada?.artista}</p>
       <p>Categoria: {cancionEncontrada?.categoria}</p>
-<<<<<<< HEAD
       <p>Duración: {cancionEncontrada?.duracion}</p>
-      <img src= {cancionEncontrada?.imagen} />
-=======
-      <img src={cancionEncontrada?.imagen} />
->>>>>>> develop
+      <img src= {cancionEncontrada?.imagen} className="w-40 h-40 object-cover rounded-lg" />
       <audio src={cancionEncontrada?.audio} controls></audio>
     </main>
   );

@@ -193,7 +193,7 @@
     audio: "/regueton/Danza_Kuduru_-_Don_Omar.mp3",
   },
   {
-    id: "21",
+    id: "22",
     titulo: "Pobre Diabla",
     artista: "Don Omar",
     categoria: "Regueton",
@@ -202,7 +202,7 @@
     audio: "/regueton/Don_Omar_-_Pobre_Diabla.mp3",
   },
   {
-    id: "22",
+    id: "23",
     titulo: "Diva Virtual",
     artista: "Don Omar",
     categoria: "Regueton",

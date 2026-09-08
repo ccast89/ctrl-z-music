@@ -36,14 +36,21 @@ function Navbar() {
           </Link>
 
           <Link
-            to="/explorador"
+            to="/buscar"
             className="text-[#B3B3B3] font-medium hover:text-[#1DB954] transition"
           >
-            Explorador
+            Buscar
           </Link>
 
           <Link
             to="/playlists"
+            className="text-[#B3B3B3] font-medium hover:text-[#1DB954] transition"
+          >
+            Crea tu playlist
+          </Link>
+
+          <Link
+            to="/biblioteca"
             className="text-[#B3B3B3] font-medium hover:text-[#1DB954] transition"
           >
             Biblioteca

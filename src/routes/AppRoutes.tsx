@@ -9,6 +9,11 @@ import Registro from "../pages/Registro";
 import ProtectedRoutes from "./ProtectedRoutes";
 import PrivateRoutes from "./PrivateRoutes";
 import Playlists from "../pages/Playlists";
+import Biblioteca from "../pages/Biblioteca";
+import Busqueda from "../pages/Busqueda";
+import MusicaDestacada from "../pages/MusicaDestacada";
+import CancionesArtista from "../pages/CancionesArtista";
+import CancionesGenero from "../pages/CancionesGenero";
 import NotFound from "../pages/NotFound";
 
 function AppRoutes() {
@@ -19,6 +24,12 @@ function AppRoutes() {
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="cancion/:id" element={<DetalleCancion />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/registro" element={<Registro />} />
+        <Route path="/buscar" element={<Busqueda />} />
+        <Route path="/biblioteca" element={<Biblioteca />} />
+        <Route path="/musica-destacada" element={<MusicaDestacada />} />
+        <Route path="/artistas/:artista" element={<CancionesArtista />} />
+        <Route path="/generos/:genero" element={<CancionesGenero />} />
         <Route
           path="/admin"
           element={
@@ -27,7 +38,6 @@ function AppRoutes() {
             </ProtectedRoutes>
           }
         />
-        <Route path="/registro" element={<Registro />} />
         <Route
           path="/playlists"
           element={

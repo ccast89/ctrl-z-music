@@ -32,14 +32,7 @@ function Footer() {
                 </Link>
               </li>
 
-              <li>
-                <Link
-                  to="/proyecto"
-                  className="text-[#B3B3B3] hover:text-[#1DB954] transition"
-                >
-                  Nuestro proyecto
-                </Link>
-              </li>
+              
 
               <li>
                 <Link

@@ -219,32 +219,5 @@
     duracion: "00:",
     audio: "",
   },
-  {
-    id: "",
-    titulo: "",
-    artista: "",
-    categoria: "",
-    imagen: "",
-    duracion: "00:",
-    audio: "",
-  },
-  {
-    id: "",
-    titulo: "",
-    artista: "",
-    categoria: "",
-    imagen: "",
-    duracion: "00:",
-    audio: "",
-  },
-  {
-    id: "",
-    titulo: "",
-    artista: "",
-    categoria: "",
-    imagen: "",
-    duracion: "00:",
-    audio: "",
-  },
-
+  
 ];

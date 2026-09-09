@@ -1,12 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
-function NotFound(){
+function NotFound() {
   return (
     <div className="min-h-screen bg-slate-900 flex flex-col items-center justify-center text-center p-6 text-white">
       {/* Diseño del número 404 */}
       <div className="relative mb-6">
         <h1 className="text-9xl font-black text-slate-800 tracking-widest select-none">
-           ERROR 404
+          ERROR 404
         </h1>
         <div className="absolute inset-0 flex items-center justify-center">
           <span className="text-6xl">🎵</span>
@@ -31,4 +31,4 @@ function NotFound(){
     </div>
   );
 }
-export default NotFound; 
+export default NotFound;

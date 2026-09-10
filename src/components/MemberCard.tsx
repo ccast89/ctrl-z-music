@@ -11,10 +11,10 @@ export default function MemberCard({ name, role, avatarUrl }: MemberCardProps) {
       <img
         src={avatarUrl}
         alt={name}
-        className="w-28 h-28 rounded-full mx-auto mb-4 object-cover border-4 border-purple-500 shadow-md"
+        className="w-28 h-28 rounded-full mx-auto mb-4 object-cover border-4 border-[#1DB954] shadow-md"
       />
       <h3 className="text-xl font-bold text-white mb-1">{name}</h3>
-      <p className="text-purple-400 font-medium text-sm">{role}</p>
+      <p className="text-[#1DB954] font-medium text-sm">{role}</p>
     </div>
   );
 }

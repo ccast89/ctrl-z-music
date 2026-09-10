@@ -32,8 +32,6 @@ function Footer() {
                 </Link>
               </li>
 
-              
-
               <li>
                 <Link
                   to="/contacto"
@@ -70,7 +68,7 @@ function Footer() {
 
               <li>
                 <Link
-                  to="/playlists"
+                  to="/biblioteca"
                   className="text-[#B3B3B3] hover:text-[#1DB954] transition"
                 >
                   Biblioteca

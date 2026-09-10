@@ -75,7 +75,7 @@
   {
     id: "9",
     titulo: "Payphone",
-    artista: "Morron 5",
+    artista: "Maroon 5",
     categoria: "Pop",
     imagen: "/imagenes/maroon-5.webp",
     duracion: "00:03:51",

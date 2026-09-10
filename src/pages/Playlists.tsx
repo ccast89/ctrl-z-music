@@ -30,6 +30,12 @@ function Playlists() {
   const [busqueda, setBusqueda] = useState("");
   const [playlistSeleccionada, setPlaylistSeleccionada] = useState("");
 
+  const [indiceCancion, setIndiceCancion] = useState(0);
+
+  const [playlistReproduciendo, setPlaylistReproduciendo] = useState<
+    number | null
+  >(null);
+
   useEffect(() => {
     try {
       localStorage.setItem("playlists", JSON.stringify(playlists));
@@ -90,6 +96,11 @@ function Playlists() {
     setPlaylists(playlistsActualizadas);
   };
 
+  const reproducirPlaylist = (playlist: Playlist) => {
+    setPlaylistReproduciendo(playlist.id);
+    setIndiceCancion(0);
+  };
+
   const eliminarPlaylist = (idPlaylist: number) => {
     const playlistsActualizadas = playlists.filter(
       (playlist) => playlist.id !== idPlaylist,
@@ -108,6 +119,22 @@ function Playlists() {
   const playlistsDelUsuario = playlists.filter(
     (playlist) => playlist.usuarioId === user.id,
   );
+  const playlistActual = playlistsDelUsuario.find(
+    (playlist) => playlist.id === playlistReproduciendo,
+  );
+  const cancionActual = canciones.find(
+    (cancion) => cancion.id === playlistActual?.canciones[indiceCancion],
+  );
+  const siguienteCancion = () => {
+    if (playlistActual && indiceCancion < playlistActual.canciones.length - 1) {
+      setIndiceCancion(indiceCancion + 1);
+    }
+  };
+  const anteriorCancion = () => {
+    if (indiceCancion > 0) {
+      setIndiceCancion(indiceCancion - 1);
+    }
+  };
 
   return (
     <main className="min-h-screen bg-neutral-950 px-6 py-10 text-white">
@@ -205,12 +232,21 @@ function Playlists() {
                     {playlist.nombre}
                   </h3>
 
-                  <button
-                    onClick={() => eliminarPlaylist(playlist.id)}
-                    className="bg-red-600 text-white font-semibold px-4 py-2 rounded-full hover:brightness-90"
-                  >
-                    Eliminar playlist
-                  </button>
+                  <div className="flex flex-col gap-2 sm:flex-row">
+                    <button
+                      onClick={() => reproducirPlaylist(playlist)}
+                      className="bg-[#1DB954] text-black font-semibold px-4 py-2 rounded-full hover:brightness-90"
+                    >
+                      ▶ Reproducir
+                    </button>
+
+                    <button
+                      onClick={() => eliminarPlaylist(playlist.id)}
+                      className="bg-red-600 text-white font-semibold px-4 py-2 rounded-full hover:brightness-90"
+                    >
+                      Eliminar playlist
+                    </button>
+                  </div>
                 </div>
 
                 {playlist.canciones.length === 0 && (
@@ -250,6 +286,33 @@ function Playlists() {
                 </div>
               </div>
             ))}
+            {cancionActual && (
+              <div className="mt-8 rounded-xl bg-neutral-900 p-6">
+                <h3 className="mb-2 text-xl font-bold">
+                  {cancionActual.titulo}
+                </h3>
+
+                <p className="mb-4 text-neutral-400">{cancionActual.artista}</p>
+
+                <audio src={cancionActual.audio} controls className="w-full" />
+
+                <div className="mt-4 flex justify-center gap-4">
+                  <button
+                    onClick={anteriorCancion}
+                    className="rounded-full bg-neutral-700 px-4 py-2"
+                  >
+                    Anterior
+                  </button>
+
+                  <button
+                    onClick={siguienteCancion}
+                    className="rounded-full bg-[#1DB954] px-4 py-2 font-semibold text-black"
+                  >
+                    Siguiente
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </section>
       </div>

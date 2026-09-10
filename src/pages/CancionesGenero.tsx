@@ -6,7 +6,7 @@ function CancionesGenero() {
   const { genero } = useParams();
 
   const cancionesDelGenero = canciones.filter(
-    (cancion) => cancion.categoria.toLowerCase() === genero,
+    (cancion) => cancion.categoria.toLowerCase() === genero?.toLowerCase(),
   );
 
   if (cancionesDelGenero.length === 0) {

@@ -16,7 +16,7 @@ function MusicGenres() {
         {/* GÉNEROS */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           <Link
-            to="/generos/Hard Rock"
+            to="/generos/hard rock"
             className="bg-[#242424] rounded-xl p-6 hover:bg-[#1DB954] hover:text-black transition cursor-pointer"
           >
             <h3 className="text-xl font-bold">Rock</h3>
@@ -24,7 +24,7 @@ function MusicGenres() {
           </Link>
 
           <Link
-            to="/generos/Pop"
+            to="/generos/pop"
             className="bg-[#242424] rounded-xl p-6 hover:bg-[#1DB954] hover:text-black transition cursor-pointer"
           >
             <h3 className="text-xl font-bold">Pop</h3>
@@ -32,7 +32,7 @@ function MusicGenres() {
           </Link>
 
           <Link
-            to="/generos/Trap"
+            to="/generos/trap"
             className="bg-[#242424] rounded-xl p-6 hover:bg-[#1DB954] hover:text-black transition cursor-pointer"
           >
             <h3 className="text-xl font-bold">Trap</h3>
@@ -40,7 +40,7 @@ function MusicGenres() {
           </Link>
 
           <Link
-            to="/generos/Regueton"
+            to="/generos/regueton"
             className="bg-[#242424] rounded-xl p-6 hover:bg-[#1DB954] hover:text-black transition cursor-pointer"
           >
             <h3 className="text-xl font-bold">Reggaetón</h3>
@@ -48,7 +48,7 @@ function MusicGenres() {
           </Link>
 
           <Link
-            to="/generos/Electro"
+            to="/generos/electro"
             className="bg-[#242424] rounded-xl p-6 hover:bg-[#1DB954] hover:text-black transition cursor-pointer"
           >
             <h3 className="text-xl font-bold">Electrónica</h3>

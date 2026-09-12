@@ -2,6 +2,8 @@ import { useParams } from "react-router";
 import { canciones } from "../data/canciones";
 import { Link } from "react-router";
 
+import Biblioteca from "./Biblioteca";
+
 function CancionesGenero() {
   const { genero } = useParams();
 
@@ -12,7 +14,8 @@ function CancionesGenero() {
   if (cancionesDelGenero.length === 0) {
     return (
       <main>
-        <h2>Género no encontrado - Error 404</h2>
+        
+        <Biblioteca />
       </main>
     );
   }

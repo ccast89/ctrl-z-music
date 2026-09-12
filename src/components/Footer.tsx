@@ -82,26 +82,26 @@ function Footer() {
             <h3 className="font-bold text-white mb-4">Seguinos</h3>
 
             <div className="flex flex-col gap-3">
-              <Link
-                to="/instagram"
+              <a
+                href="https://instagram.com" target="_blank"
                 className="text-[#B3B3B3] hover:text-[#1DB954] transition"
               >
                 Instagram
-              </Link>
+              </a>
 
-              <Link
-                to="/facebook"
-                className="text-[#B3B3B3] hover:text-[#1DB954] transition"
-              >
+              <a
+                href= "https://www.facebook.com/" target="_blank"
+                className="text-[#B3B3B3] hover:text-[#1DB954] transition">
+              
                 Facebook
-              </Link>
+              </a>
 
-              <Link
-                to="/x"
-                className="text-[#B3B3B3] hover:text-[#1DB954] transition"
-              >
-                X
-              </Link>
+              <a
+                href="https://x.com"
+                className="text-[#B3B3B3] hover:text-[#1DB954] transition" target="_blank">X</a>
+              
+                
+                
             </div>
           </div>
         </div>

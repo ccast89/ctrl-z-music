@@ -14,14 +14,12 @@ export default function AcercaDeNosotros() {
       name: "Alvaro Cedron",
       role: "Desarrollador Frontend / diseñador",
       avatarUrl: "/fotos/Alvaro.jpeg",
-        
     },
     {
       id: 3,
       name: "Pepe Galarzo",
       role: "Desarrollador Frontend",
-      avatarUrl:
-        "https://i.pinimg.com/474x/16/e3/e1/16e3e14f68020bce613fd642abb3c8c9.jpg",
+      avatarUrl: "/fotos/Jose.jpeg",
     },
     {
       id: 4,

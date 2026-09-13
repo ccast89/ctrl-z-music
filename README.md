@@ -4,7 +4,7 @@ CTRL-Z Music es una aplicación web de streaming de música desarrollada como pr
 
 La aplicación permite explorar canciones por género y artista, buscar música, consultar el detalle de cada canción y crear playlists personales. También cuenta con un sistema de registro e inicio de sesión, rutas privadas y administración de usuarios.
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - Registro e inicio de sesión de usuarios.
 - Manejo de sesión mediante Context y localStorage.
@@ -24,7 +24,7 @@ La aplicación permite explorar canciones por género y artista, buscar música,
 - Navegación mediante React Router.
 - Diseño responsive.
 
-## 🛠️ Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - React
 - TypeScript
@@ -36,7 +36,7 @@ La aplicación permite explorar canciones por género y artista, buscar música,
 - GitHub
 - localStorage
 
-## 📂 Secciones principales
+## Secciones principales
 
 La aplicación cuenta con diferentes páginas y secciones:
 
@@ -51,7 +51,7 @@ La aplicación cuenta con diferentes páginas y secciones:
 - **Acerca de Nosotros:** información sobre el proyecto y el equipo de desarrollo.
 - **Login y Registro:** permiten crear una cuenta e iniciar sesión.
 
-## 🔐 Autenticación
+## Autenticación
 
 El proyecto utiliza Context API para compartir la información de autenticación entre los distintos componentes de la aplicación.
 
@@ -63,7 +63,7 @@ También se utilizan rutas privadas para controlar el acceso a determinadas pág
 
 La sección de administración cuenta además con control de acceso según el rol del usuario.
 
-## 🎧 Playlists
+## Playlists
 
 Cada usuario puede crear sus propias playlists y agregar canciones disponibles en la aplicación.
 
@@ -77,7 +77,7 @@ Desde una playlist también es posible:
 - Quitar canciones.
 - Eliminar la playlist.
 
-## 💻 Instalación
+## Instalación
 
 Para ejecutar el proyecto de manera local:
 
@@ -107,13 +107,13 @@ pnpm run dev
 
 5. Abrir en el navegador la dirección indicada por Vite.
 
-## 👥 Equipo de desarrollo
+## Equipo de desarrollo
 
 - **Carla Castellano** — Líder de equipo / Desarrolladora
 - **Álvaro Cedrón** — Desarrollador Frontend / Diseñador
 - **José Galarzo** — Desarrollador Frontend
 - **Esteban Vellido** — Desarrollador Frontend
 
-## 📚 Proyecto académico
+## Proyecto académico
 
 CTRL-Z Music fue desarrollado como proyecto grupal de RollingCode School, con el objetivo de aplicar los conocimientos adquiridos sobre desarrollo web con React, TypeScript, manejo de rutas, componentes, Context API, autenticación, persistencia de datos y trabajo colaborativo con Git y GitHub.

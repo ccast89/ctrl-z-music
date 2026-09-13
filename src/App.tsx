@@ -1,9 +1,7 @@
+import AppRoutes from "./routes/AppRoutes";
+
 function App() {
-  return (
-    <div>
-      <h1 className="text-4xl font-bold">Ctrl Z Music</h1>
-    </div>
-  );
+  return <AppRoutes />;
 }
 
 export default App;
